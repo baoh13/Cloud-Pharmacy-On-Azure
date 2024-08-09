@@ -34,10 +34,10 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Register Microsoft.ContainerRegistry provider
-        run: |
-          az provider register --namespace Microsoft.ContainerRegistry
-          az provider show -n Microsoft.ContainerRegistry -o table
+      # - name: Register Microsoft.ContainerRegistry provider
+      #   run: |
+      #     az provider register --namespace Microsoft.ContainerRegistry
+      #     az provider show -n Microsoft.ContainerRegistry -o table
         
         # Deploy Bicep file
       - name: Create Azure Container Registry
