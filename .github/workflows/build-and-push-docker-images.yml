@@ -2,7 +2,7 @@ name: Build and push Docker images
 
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
     paths:
       - 'src/backend-apis/**'
       - '!src/backend-apis/CloudPharmacy.LiveNotifications.FuncApp/**'
