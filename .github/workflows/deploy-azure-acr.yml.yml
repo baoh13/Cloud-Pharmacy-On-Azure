@@ -2,7 +2,7 @@ name: Create Azure Container Registry
 
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
     paths:
       - src/azure-infrastructure/container-registry-main.bicep
 
@@ -18,7 +18,7 @@ env:
 jobs:
   deploy-azure-acr-for-dev-environment:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/dev'
 
     steps:
       - name: 'Code checkout'
