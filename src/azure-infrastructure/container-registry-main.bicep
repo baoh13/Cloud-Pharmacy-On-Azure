@@ -5,7 +5,7 @@ param environmentType string = 'dev'
 resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-07-01' = {
   name: containerRegistryName
   tags:{
-    'environment':environmentType
+    environment: environmentType
   }
   location: location
   sku: {
