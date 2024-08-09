@@ -1,6 +1,4 @@
 name: Build and push Docker images
-env:
-  DEFAULT_ENVIRONMENT: dev
 
 on:
   push:
@@ -17,6 +15,8 @@ permissions:
 jobs: 
   build-and-push-docker-images-to-acr:
     runs-on: ubuntu-latest
+    environment:
+      name: dev
     
     steps:
       - name: 'Code checkout'
